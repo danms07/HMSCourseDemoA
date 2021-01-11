@@ -34,4 +34,15 @@
             android:value="true"/>
     </application>
 
+    <queries>
+        <intent>
+            <action android:name="com.huawei.hms.core.aidlservice" />
+        </intent>
+    </queries>
+
+    <meta-data
+        android:name="install_channel"
+        android:value="AppGallery">
+    </meta-data>
+
 </manifest>

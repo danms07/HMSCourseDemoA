@@ -67,6 +67,9 @@ dependencies {
     //Push Kit
     implementation 'com.huawei.hms:push:5.0.4.302'
 
+    //Analytics
+    implementation 'com.huawei.hms:hianalytics:5.1.0.300'
+
     implementation 'androidx.navigation:navigation-fragment:2.3.2'
     implementation 'androidx.navigation:navigation-ui:2.3.2'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
