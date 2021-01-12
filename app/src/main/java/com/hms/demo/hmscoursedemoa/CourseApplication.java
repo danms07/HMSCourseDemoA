@@ -2,6 +2,7 @@ package com.hms.demo.hmscoursedemoa;
 
 import android.app.Application;
 
+import com.huawei.hms.ads.HwAds;
 import com.huawei.hms.analytics.HiAnalytics;
 import com.huawei.hms.analytics.HiAnalyticsInstance;
 import com.huawei.hms.analytics.type.ReportPolicy;
@@ -27,5 +28,8 @@ public class CourseApplication extends Application {
         reportPolicies.add(moveBackgroundPolicy);
         // Set the ON_MOVE_BACKGROUND_POLICY and ON_CACHE_THRESHOLD_POLICY policies.
         instance.setReportPolicies(reportPolicies);
+
+        //Initializing Huawei Ads
+        HwAds.init(this);
     }
 }

@@ -33,10 +33,15 @@ android {
             minifyEnabled false
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            resValue "string", "splashAdId", "testq6zq98hecj"
+            resValue "string", "bannerAdId", "testw6vs28auh3"
         }
         debug {
             signingConfig signingConfigs.release
             debuggable true
+            resValue "string", "splashAdId", "testq6zq98hecj"
+            resValue "string", "bannerAdId", "testw6vs28auh3"
         }
     }
     compileOptions {
@@ -69,6 +74,9 @@ dependencies {
 
     //Analytics
     implementation 'com.huawei.hms:hianalytics:5.1.0.300'
+
+    //Ads
+    implementation 'com.huawei.hms:ads-lite:13.4.37.300'
 
     implementation 'androidx.navigation:navigation-fragment:2.3.2'
     implementation 'androidx.navigation:navigation-ui:2.3.2'
