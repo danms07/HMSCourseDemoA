@@ -9,9 +9,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.hms.demo.hmscoursedemoa.databinding.LoginBinding;
-import com.hms.demo.hmscoursedemoa.ui.home.HomeViewModel;
 import com.huawei.hmf.tasks.Task;
-import com.huawei.hms.common.ApiException;
 import com.huawei.hms.support.account.AccountAuthManager;
 import com.huawei.hms.support.account.result.AuthAccount;
 import com.huawei.hms.support.account.service.AccountAuthService;
