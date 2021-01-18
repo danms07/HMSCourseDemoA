@@ -4,10 +4,12 @@ import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 
+import com.huawei.agconnect.config.AGConnectServicesConfig;
 import com.huawei.hms.ads.HwAds;
 import com.huawei.hms.analytics.HiAnalytics;
 import com.huawei.hms.analytics.HiAnalyticsInstance;
 import com.huawei.hms.analytics.type.ReportPolicy;
+import com.huawei.hms.maps.MapsInitializer;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -34,6 +36,12 @@ public class CourseApplication extends Application {
         //Initializing Huawei Ads
         HwAds.init(this);
         createNotificationChannel();
+
+        //Set the Huawei Maps API key
+        String apiKey=AGConnectServicesConfig
+                .fromContext(this)
+                .getString("client/api_key");
+        MapsInitializer.setApiKey(apiKey);
     }
 
     private void createNotificationChannel() {
