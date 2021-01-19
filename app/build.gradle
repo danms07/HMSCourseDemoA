@@ -88,6 +88,10 @@ dependencies {
     implementation 'com.huawei.hms:maproute-fallback:5.1.0.300'
     implementation 'com.huawei.hms:hwmaps-fallback:5.1.0.300'
 
+    //Location Kit
+    implementation 'com.huawei.hms:location:5.1.0.300'
+
+
     //Work Manager
     implementation "androidx.work:work-runtime:2.4.0"
 
