@@ -91,6 +91,8 @@ dependencies {
     //Location Kit
     implementation 'com.huawei.hms:location:5.1.0.300'
 
+    //Site Kit
+    implementation 'com.huawei.hms:site:5.1.0.300'
 
     //Work Manager
     implementation "androidx.work:work-runtime:2.4.0"

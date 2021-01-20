@@ -1,7 +1,9 @@
 package com.hms.demo.hmscoursedemoa.ui.map;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -14,8 +16,17 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.hms.demo.hmscoursedemoa.R;
 import com.hms.demo.hmscoursedemoa.databinding.MapBinding;
+import com.huawei.agconnect.config.AGConnectServicesConfig;
 import com.huawei.hms.common.ResolvableApiException;
+import com.huawei.hms.site.api.SearchService;
+import com.huawei.hms.site.api.SearchServiceFactory;
+import com.huawei.hms.site.api.model.Site;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 public class MapFragment extends Fragment implements MapViewModel.MapNavigator {
 
@@ -82,6 +93,31 @@ public class MapFragment extends Fragment implements MapViewModel.MapNavigator {
         } catch (IntentSender.SendIntentException sendIntentException) {
             sendIntentException.printStackTrace();
         }
+    }
+
+    @Override
+    public SearchService loadSearchService() {
+        String key= AGConnectServicesConfig
+                .fromContext(requireContext())
+                .getString("client/api_key");
+        try {
+            String apiKey= URLEncoder.encode(key, StandardCharsets.UTF_8.name());
+            return  SearchServiceFactory.create(requireContext(),
+                    key);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+    }
+
+    @Override
+    public void displaySiteDialog(Site site) {
+        AlertDialog.Builder builder=new AlertDialog.Builder(requireContext())
+        .setTitle(site.name)
+        .setMessage(site.formatAddress)
+        .setPositiveButton(R.string.ok, (dialog, which) -> dialog.dismiss());
+        builder.create().show();
     }
 
     @Override

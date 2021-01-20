@@ -17,4 +17,5 @@
     <string name="channel_name">Push Notification Channel</string>
     <string name="channel_description">Channel for displaying notifications</string>
     <string name="channel_id">Push</string>
+    <string name="ok">OK</string>
 </resources>
