@@ -64,10 +64,7 @@ public class SplashActivity extends AppCompatActivity {
         int orientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
         AdParam adParam = new AdParam.Builder().build();
         SplashView.SplashAdLoadListener splashAdLoadListener = new SplashView.SplashAdLoadListener() {
-            @Override
-            public void onAdLoaded() {
-                // Called when an ad is loaded successfully.
-            }
+
             @Override
             public void onAdFailedToLoad(int errorCode) {
                 // Called when an ad fails to be loaded. The app home screen is then displayed.

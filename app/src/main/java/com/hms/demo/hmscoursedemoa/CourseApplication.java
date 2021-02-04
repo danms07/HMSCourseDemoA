@@ -3,15 +3,19 @@ package com.hms.demo.hmscoursedemoa;
 import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.util.Log;
 
 import com.huawei.agconnect.config.AGConnectServicesConfig;
+import com.huawei.agconnect.remoteconfig.AGConnectConfig;
 import com.huawei.hms.ads.HwAds;
 import com.huawei.hms.analytics.HiAnalytics;
 import com.huawei.hms.analytics.HiAnalyticsInstance;
 import com.huawei.hms.analytics.type.ReportPolicy;
 import com.huawei.hms.maps.MapsInitializer;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class CourseApplication extends Application {
@@ -42,6 +46,20 @@ public class CourseApplication extends Application {
                 .fromContext(this)
                 .getString("client/api_key");
         MapsInitializer.setApiKey(apiKey);
+
+
+        //Initializing Remote Config
+        AGConnectConfig config = AGConnectConfig.getInstance();
+        config.applyDefault(R.xml.remote_config);
+        /*Map<String, Object> map = new HashMap<>();
+        map.put("text", "test1");
+        map.put("bg_color", "RED");
+        map.put("text_color", "BLUE");
+        map.put("size", 25);
+        //Log.e("Remote",map.toString());
+        config.applyDefault(map);
+         */
+
     }
 
     private void createNotificationChannel() {

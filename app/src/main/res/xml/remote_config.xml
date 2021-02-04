@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<remoteconfig>
+    <value key="text_color">BLUE</value>
+    <value key="text">Remote Fragment</value>
+    <value key="size">25</value>
+    <value key="bg_color">WHITE</value>
+</remoteconfig>

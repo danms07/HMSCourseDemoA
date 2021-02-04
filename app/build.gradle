@@ -40,6 +40,7 @@ android {
         debug {
             signingConfig signingConfigs.release
             debuggable true
+            minifyEnabled false
             resValue "string", "splashAdId", "testq6zq98hecj"
             resValue "string", "bannerAdId", "testw6vs28auh3"
         }
@@ -93,6 +94,9 @@ dependencies {
 
     //Site Kit
     implementation 'com.huawei.hms:site:5.1.0.300'
+
+    //RemoteConfig
+    implementation 'com.huawei.agconnect:agconnect-remoteconfig:1.4.2.301'
 
     //Work Manager
     implementation "androidx.work:work-runtime:2.4.0"

@@ -12,10 +12,10 @@
         tools:layout="@layout/fragment_map" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.hms.demo.hmscoursedemoa.ui.profile.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_profile" />
+        android:id="@+id/nav_remote"
+        android:name="com.hms.demo.hmscoursedemoa.ui.remote.RemoteFragment"
+        android:label="@string/menu_remote"
+        tools:layout="@layout/fragment_remote" />
 
     <fragment
         android:id="@+id/nav_slideshow"
