@@ -98,6 +98,9 @@ dependencies {
     //RemoteConfig
     implementation 'com.huawei.agconnect:agconnect-remoteconfig:1.4.2.301'
 
+    //Nearby Service
+    implementation 'com.huawei.hms:nearby:5.1.0.300'
+
     //Work Manager
     implementation "androidx.work:work-runtime:2.4.0"
 

@@ -10,6 +10,11 @@
     <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
 
     <application
         android:allowBackup="false"
@@ -44,6 +49,10 @@
         <meta-data
             android:name="push_kit_auto_init_enabled"
             android:value="true"/>
+        <meta-data
+            android:name="install_channel"
+            android:value="AppGallery">
+        </meta-data>
     </application>
 
     <queries>
@@ -51,10 +60,4 @@
             <action android:name="com.huawei.hms.core.aidlservice" />
         </intent>
     </queries>
-
-    <meta-data
-        android:name="install_channel"
-        android:value="AppGallery">
-    </meta-data>
-
 </manifest>
