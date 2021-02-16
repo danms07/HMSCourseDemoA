@@ -22,7 +22,6 @@ import java.util.ArrayList;
 
 public class NearbyFragment extends Fragment implements ChatService.ChatServiceListener {
 
-    //private NearbyViewModel nearbyViewModel;
     private static final int PERMISSION_CODE = 1;
     private NearbyBinding binding;
     private ArrayList<MessageBean> messages;
