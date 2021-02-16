@@ -184,6 +184,21 @@ public class ChatService extends ConnectCallback {
         connectTaskResult = StatusCode.STATUS_NOT_CONNECTED;
     }
 
+    private final ConnectCallback connectCallback= new ConnectCallback(){
+        @Override
+        public void onEstablish(String s, ConnectInfo connectInfo) {
+
+        }
+        @Override
+        public void onResult(String s, ConnectResult connectResult) {
+
+        }
+        @Override
+        public void onDisconnected(String s) {
+
+        }
+    };
+
     public interface ChatServiceListener {
         void showToast(String message);
 
