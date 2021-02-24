@@ -22,4 +22,11 @@
         android:name="com.hms.demo.hmscoursedemoa.ui.nearby.NearbyFragment"
         android:label="@string/menu_nearby"
         tools:layout="@layout/fragment_nearby" />
+
+    <fragment
+        android:id="@+id/nav_iap"
+        android:name="com.hms.demo.hmscoursedemoa.ui.iap.IAPFragment"
+        android:label="@string/menu_iap"
+        tools:layout="@layout/fragment_iap"
+        />
 </navigation>

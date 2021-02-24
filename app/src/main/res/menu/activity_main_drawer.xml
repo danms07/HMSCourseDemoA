@@ -16,5 +16,9 @@
             android:id="@+id/nav_nearby"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_nearby" />
+        <item
+            android:id="@+id/nav_iap"
+            android:icon="@drawable/ic_shopping_bag_black_24dp"
+            android:title="@string/menu_iap" />
     </group>
 </menu>

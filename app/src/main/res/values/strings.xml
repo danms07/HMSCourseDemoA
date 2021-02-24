@@ -11,6 +11,7 @@
     <string name="menu_map">Map</string>
     <string name="menu_remote">Remote Config</string>
     <string name="menu_nearby">Nearby</string>
+     <string name="menu_iap">IAP</string>
 
     <string name="owner">Course Demo</string>
     <string name="copyright_info">Huawei</string>
@@ -24,4 +25,6 @@
     <string name="begin">Begin to chat!</string>
     <string name="send">Send</string>
     <string name="input_message_here">Your Message</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

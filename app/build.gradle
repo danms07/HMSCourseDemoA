@@ -61,7 +61,7 @@ android {
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
     //AG Connect Core
@@ -71,7 +71,7 @@ dependencies {
     implementation 'com.huawei.hms:hwid:5.1.0.301'
 
     //Push Kit
-    implementation 'com.huawei.hms:push:5.0.4.302'
+    implementation 'com.huawei.hms:push:5.1.1.301'
 
     //Analytics
     implementation 'com.huawei.hms:hianalytics:5.1.0.300'
@@ -101,13 +101,20 @@ dependencies {
     //Nearby Service
     implementation 'com.huawei.hms:nearby:5.1.0.300'
 
+    //Safety Detect
+    implementation 'com.huawei.hms:safetydetect:5.0.5.302'
+
+    //IAP
+    implementation 'com.huawei.hms:iap:5.1.0.300'
+
     //Work Manager
     implementation "androidx.work:work-runtime:2.4.0"
 
-    implementation 'androidx.navigation:navigation-fragment:2.3.2'
-    implementation 'androidx.navigation:navigation-ui:2.3.2'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.3'
+    implementation 'androidx.navigation:navigation-ui:2.3.3'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
