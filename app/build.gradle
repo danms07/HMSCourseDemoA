@@ -68,7 +68,7 @@ dependencies {
     implementation 'com.huawei.agconnect:agconnect-core:1.4.2.301'
 
     //Account kit
-    implementation 'com.huawei.hms:hwid:5.1.0.301'
+    implementation 'com.huawei.hms:hwid:5.1.1.300'
 
     //Push Kit
     implementation 'com.huawei.hms:push:5.1.1.301'

@@ -11,7 +11,8 @@
     <string name="menu_map">Map</string>
     <string name="menu_remote">Remote Config</string>
     <string name="menu_nearby">Nearby</string>
-     <string name="menu_iap">IAP</string>
+    <string name="menu_iap">IAP</string>
+    <string name="menu_safety">Safety Detect</string>
 
     <string name="owner">Course Demo</string>
     <string name="copyright_info">Huawei</string>

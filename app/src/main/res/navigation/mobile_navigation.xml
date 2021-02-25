@@ -29,4 +29,11 @@
         android:label="@string/menu_iap"
         tools:layout="@layout/fragment_iap"
         />
+
+    <fragment
+        android:id="@+id/nav_safety"
+        android:name="com.hms.demo.hmscoursedemoa.ui.safety.SafetyFragment"
+        android:label="@string/menu_safety"
+        tools:layout="@layout/fragment_safety"
+        />
 </navigation>

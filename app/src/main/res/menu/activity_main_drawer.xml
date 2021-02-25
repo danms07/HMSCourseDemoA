@@ -20,5 +20,10 @@
             android:id="@+id/nav_iap"
             android:icon="@drawable/ic_shopping_bag_black_24dp"
             android:title="@string/menu_iap" />
+
+        <item
+            android:id="@+id/nav_safety"
+            android:icon="@drawable/ic_shield_black_24dp"
+            android:title="@string/menu_safety"/>
     </group>
 </menu>
