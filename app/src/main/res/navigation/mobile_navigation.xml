@@ -36,4 +36,6 @@
         android:label="@string/menu_safety"
         tools:layout="@layout/fragment_safety"
         />
+
+
 </navigation>

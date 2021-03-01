@@ -25,5 +25,7 @@
             android:id="@+id/nav_safety"
             android:icon="@drawable/ic_shield_black_24dp"
             android:title="@string/menu_safety"/>
+
+
     </group>
 </menu>
