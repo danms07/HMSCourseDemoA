@@ -32,6 +32,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HMSCourseDemoA"
         android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=103658747" />
+
         <activity android:name=".ScanActivity"
             android:label="@string/action_scan"></activity>
         <activity android:name=".LoginActivity" />
@@ -56,16 +61,15 @@
                 <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+        <meta-data
+            android:name="install_channel"
+            android:value="AppGallery"/>
+
 
         <meta-data
             android:name="push_kit_auto_init_enabled"
             android:value="true" />
-        <meta-data
-            android:name="install_channel"
-            android:value="AppGallery"></meta-data>
-        <meta-data
-            android:name="com.huawei.hms.client.appid"
-            android:value="appid=103658747" />
+
     </application>
 
 </manifest>

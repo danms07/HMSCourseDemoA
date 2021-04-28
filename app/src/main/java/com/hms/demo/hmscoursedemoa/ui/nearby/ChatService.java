@@ -45,7 +45,6 @@ public class ChatService extends ConnectCallback {
         @Override
         public void handleMessage(@NonNull Message msg) {
             handler.removeMessages(0);
-            Log.e(TAG,"messageReceived");
             if (connectTaskResult != StatusCode.STATUS_SUCCESS) {
                 if (listener != null) {
                     listener.onDisconnected();
@@ -101,7 +100,6 @@ public class ChatService extends ConnectCallback {
     }
 
     public void startBroadcasting() throws RemoteException {
-        Log.e(TAG,"startBroadcasting()");
         BroadcastOption.Builder advBuilder = new BroadcastOption.Builder();
         advBuilder.setPolicy(Policy.POLICY_STAR);
         mDiscoveryEngine.startBroadcasting(myName, serviceId, this, advBuilder.build());
@@ -182,22 +180,9 @@ public class ChatService extends ConnectCallback {
     public void onDisconnected(String endpointId) {
         displayToast("Disconnect.");
         connectTaskResult = StatusCode.STATUS_NOT_CONNECTED;
+        if(listener!=null)listener.onDisconnected();
     }
 
-    private final ConnectCallback connectCallback= new ConnectCallback(){
-        @Override
-        public void onEstablish(String s, ConnectInfo connectInfo) {
-
-        }
-        @Override
-        public void onResult(String s, ConnectResult connectResult) {
-
-        }
-        @Override
-        public void onDisconnected(String s) {
-
-        }
-    };
 
     public interface ChatServiceListener {
         void showToast(String message);

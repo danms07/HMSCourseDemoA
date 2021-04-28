@@ -31,7 +31,8 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        loadAd();
+        //loadAd();
+        silentSignIn();
     }
 
     // Callback processing when an ad display timeout message is received.

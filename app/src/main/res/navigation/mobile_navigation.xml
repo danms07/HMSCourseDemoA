@@ -36,6 +36,11 @@
         android:label="@string/menu_safety"
         tools:layout="@layout/fragment_safety"
         />
-
+    <fragment
+        android:id="@+id/nav_panorama"
+        android:name="com.hms.demo.hmscoursedemoa.ui.panorama.PanoramaFragment"
+        android:label="@string/menu_panorama"
+        tools:layout="@layout/fragment_panorama"
+        />
 
 </navigation>

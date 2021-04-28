@@ -10,11 +10,14 @@ public class MyHmsMessageService extends HmsMessageService {
     @Override
     public void onNewToken(String token) {
         super.onNewToken(token);
-        Log.e("Token",token);
+        Log.i("Token",token);
     }
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
+
+        
+
     }
 }

@@ -10,11 +10,11 @@
             android:title="@string/menu_map" />
         <item
             android:id="@+id/nav_remote"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_remote" />
         <item
             android:id="@+id/nav_nearby"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@android:drawable/sym_action_chat"
             android:title="@string/menu_nearby" />
         <item
             android:id="@+id/nav_iap"
@@ -25,6 +25,10 @@
             android:id="@+id/nav_safety"
             android:icon="@drawable/ic_shield_black_24dp"
             android:title="@string/menu_safety"/>
+        <item
+            android:id="@+id/nav_panorama"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_panorama"/>
 
 
     </group>

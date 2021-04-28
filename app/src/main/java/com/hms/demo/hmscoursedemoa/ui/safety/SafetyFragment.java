@@ -120,14 +120,6 @@ public class SafetyFragment extends Fragment implements View.OnClickListener {
                                                 "\nCategory"+maliciousApp.getApkCategory()+
                                                 "\n\n"
                                 );
-                                Log.e(TAG, "-----APP-----");
-                                // Use getApkPackageName() to get APK name of malicious app.
-                                Log.e(TAG, "APK: " + maliciousApp.getApkPackageName());
-                                // Use getApkSha256() to get APK sha256 of malicious app.
-                                Log.e(TAG, "SHA-256: " + maliciousApp.getApkSha256());
-                                // Use getApkCategory() to get category of malicious app.
-                                // Categories are defined in AppsCheckConstants
-                                Log.e(TAG, "Category: " + maliciousApp.getApkCategory());
                             }
                         }
                     } else {
@@ -227,7 +219,6 @@ public class SafetyFragment extends Fragment implements View.OnClickListener {
                                 // Indicates that communication with the service was successful.
                                 String responseToken = userDetectResponse.getResponseToken();
                                 if (!responseToken.isEmpty()) {
-                                    showValidDialog();
                                     // Send the response token to your app server, and call the cloud API of HMS Core on your server to obtain the fake user detection result.
                                 }
                             }
