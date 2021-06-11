@@ -65,10 +65,10 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
     //AG Connect Core
-    implementation 'com.huawei.agconnect:agconnect-core:1.4.2.301'
+    implementation 'com.huawei.agconnect:agconnect-core:1.5.1.300'
 
     //Account kit
-    implementation 'com.huawei.hms:hwid:5.1.1.300'
+    implementation 'com.huawei.hms:hwid:5.2.0.300'
 
     //Push Kit
     implementation 'com.huawei.hms:push:5.1.1.301'
@@ -83,7 +83,7 @@ dependencies {
     implementation 'com.huawei.hms:dtm-api:5.1.0.300'
 
     //MAPs
-    implementation 'com.huawei.hms:maps:5.1.0.300'
+    implementation 'com.huawei.hms:maps:5.2.0.301'
 
     //MAPs Fallback dependencies
     implementation 'com.huawei.hms:maproute-fallback:5.1.0.300'
@@ -120,8 +120,8 @@ dependencies {
     //Work Manager
     //implementation "androidx.work:work-runtime:2.4.0"
 
-    implementation 'androidx.navigation:navigation-fragment:2.3.4'
-    implementation 'androidx.navigation:navigation-ui:2.3.4'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

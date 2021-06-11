@@ -50,15 +50,15 @@ public class CourseApplication extends Application {
 
         //Initializing Remote Config
         AGConnectConfig config = AGConnectConfig.getInstance();
-        config.applyDefault(R.xml.remote_config);
-        /*Map<String, Object> map = new HashMap<>();
+        //config.applyDefault(R.xml.remote_config);
+        Map<String, Object> map = new HashMap<>();
         map.put("text", "test1");
         map.put("bg_color", "RED");
         map.put("text_color", "BLUE");
         map.put("size", 25);
         //Log.e("Remote",map.toString());
         config.applyDefault(map);
-         */
+
 
     }
 

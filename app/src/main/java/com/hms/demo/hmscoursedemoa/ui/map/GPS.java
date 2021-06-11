@@ -8,6 +8,7 @@ import android.util.Log;
 import com.huawei.hms.common.ApiException;
 import com.huawei.hms.common.ResolvableApiException;
 import com.huawei.hms.location.FusedLocationProviderClient;
+import com.huawei.hms.location.LocationAvailability;
 import com.huawei.hms.location.LocationCallback;
 import com.huawei.hms.location.LocationRequest;
 import com.huawei.hms.location.LocationResult;
@@ -111,9 +112,10 @@ public class GPS extends LocationCallback {
 
     }
 
+
+
     public interface OnGPSEventListener {
         void onResolutionRequired(Exception e);
-
         void onLocationUpdate(LatLng latLng);
     }
 }

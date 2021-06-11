@@ -71,7 +71,7 @@ public class SafetyFragment extends Fragment implements View.OnClickListener {
     private void startSafety() {
         invokeSysIntegrity();
         invokeGetMaliciousApps();
-        invokeGetWifiDetectStatus();
+        //invokeGetWifiDetectStatus();
     }
 
     private void invokeGetWifiDetectStatus() {

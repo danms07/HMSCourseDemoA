@@ -14,7 +14,9 @@ import com.huawei.hms.maps.CameraUpdateFactory;
 import com.huawei.hms.maps.HuaweiMap;
 import com.huawei.hms.maps.OnMapReadyCallback;
 import com.huawei.hms.maps.model.LatLng;
+import com.huawei.hms.maps.model.MarkerOptions;
 import com.huawei.hms.maps.model.PointOfInterest;
+import com.huawei.hms.maps.model.PolygonOptions;
 import com.huawei.hms.site.api.SearchResultListener;
 import com.huawei.hms.site.api.SearchService;
 import com.huawei.hms.site.api.SearchServiceFactory;
@@ -25,9 +27,10 @@ import com.huawei.hms.site.api.model.Site;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
 public class MapViewModel extends ViewModel
-        implements OnMapReadyCallback, GPS.OnGPSEventListener,
+        implements  GPS.OnGPSEventListener,
         HuaweiMap.OnPoiClickListener, SearchResultListener<DetailSearchResponse> {
 
     private MapNavigator navigator;
@@ -35,18 +38,12 @@ public class MapViewModel extends ViewModel
     private GPS gps=null;
     private final LatLng location;
     private boolean pendingLocation=false;
-    private HuaweiMap map;
 
     public MapViewModel() {
         locationPermissions=false;
         location=new LatLng(0,0);
     }
 
-    @Override
-    public void onMapReady(HuaweiMap huaweiMap) {
-        huaweiMap.setOnPoiClickListener(this);
-        this.map=huaweiMap;
-    }
 
     public void setNavigator(MapNavigator navigator){
         this.navigator=navigator;
@@ -91,21 +88,13 @@ public class MapViewModel extends ViewModel
 
     @Override
     public void onLocationUpdate(LatLng location) {
-        if(pendingLocation){
-            navigateToLocation(location);
+        if(pendingLocation&&navigator!=null){
+            pendingLocation=false;
+            navigator.navigateToLocation(location);
         }
         this.location.latitude=location.latitude;
         this.location.longitude=location.longitude;
 
-    }
-
-    private void navigateToLocation(LatLng location) {
-
-        CameraUpdate update=CameraUpdateFactory.newLatLngZoom(location,15f);
-        if(map!=null){
-            pendingLocation=false;
-            map.animateCamera(update);
-        }
     }
 
     @Override
@@ -138,6 +127,7 @@ public class MapViewModel extends ViewModel
     }
 
     interface MapNavigator{
+        void navigateToLocation(LatLng location);
         void requestLocationPermissions();
         void startResolutionForResult(ResolvableApiException e);
         SearchService loadSearchService();

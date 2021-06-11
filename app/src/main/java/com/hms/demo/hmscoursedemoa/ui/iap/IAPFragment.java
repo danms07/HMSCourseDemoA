@@ -132,11 +132,12 @@ public class IAPFragment extends Fragment implements ProductAdapter.ProductItemL
     public void obtainProducts() {
         List<String> productIdList = new ArrayList<>();
 // Only those products already configured in AppGallery Connect can be queried.
-        productIdList.add("IAPDEMO");
-        productIdList.add("CONSUMABLE_1");
+        //productIdList.add("IAPDEMO");
+        //productIdList.add("CONSUMABLE_1");
+        productIdList.add("Producto1");
         ProductInfoReq req = new ProductInfoReq();
         // priceType: 0: consumable; 1: non-consumable; 2: subscription
-        req.setPriceType(0);
+        req.setPriceType(1);
         req.setProductIds(productIdList);
         // Obtain the Activity object that calls the API.
         Activity activity = requireActivity();
@@ -172,7 +173,7 @@ public class IAPFragment extends Fragment implements ProductAdapter.ProductItemL
         // Only those products already configured in AppGallery Connect can be purchased through the createPurchaseIntent API.
         req.setProductId(item.getProductId());
         // priceType: 0: consumable; 1: non-consumable; 2: subscription
-        req.setPriceType(0);
+        req.setPriceType(item.getPriceType());
         req.setDeveloperPayload("test");
         // Obtain the Activity object that calls the API.
         final Activity activity = requireActivity();
@@ -221,11 +222,15 @@ public class IAPFragment extends Fragment implements ProductAdapter.ProductItemL
                 // Start delivery if the verification is successful.
                 // Call the consumeOwnedPurchase API to consume the product after delivery if the product is a consumable.
                 try {
-                    ConsumeOwnedPurchaseReq req = new ConsumeOwnedPurchaseReq();
+
                     InAppPurchaseData inAppPurchaseDataBean = new InAppPurchaseData(inAppPurchaseData);
+
+
+                    ConsumeOwnedPurchaseReq req = new ConsumeOwnedPurchaseReq();
                     String productId=inAppPurchaseDataBean.getProductId();
 
                     String purchaseToken = inAppPurchaseDataBean.getPurchaseToken();
+                    //Realizar peticion web
                     req.setPurchaseToken(purchaseToken);
                     provideProduct(productId);
                     consumePurchase(productId,req);
