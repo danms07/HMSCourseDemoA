@@ -134,8 +134,8 @@ public class MapFragment extends Fragment implements MapViewModel.MapNavigator, 
     @Override
     public void displaySiteDialog(Site site) {
         AlertDialog.Builder builder=new AlertDialog.Builder(requireContext())
-        .setTitle(site.name)
-        .setMessage(site.formatAddress)
+        .setTitle(site.getName())
+        .setMessage(site.getFormatAddress())
         .setPositiveButton(R.string.ok, (dialog, which) -> dialog.dismiss());
         builder.create().show();
     }

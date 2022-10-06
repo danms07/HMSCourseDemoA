@@ -37,7 +37,7 @@ public class GPS extends LocationCallback {
     }
 
     public void startLocationRequests(long interval) {
-        SettingsClient settingsClient = LocationServices.getSettingsClient(context);
+
         // set the interval for location updates, in milliseconds.
         LocationRequest mLocationRequest = new LocationRequest();
         mLocationRequest.setInterval(interval);
@@ -46,6 +46,7 @@ public class GPS extends LocationCallback {
 
         LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder();
         builder.addLocationRequest(mLocationRequest);
+        SettingsClient settingsClient = LocationServices.getSettingsClient(context);
         settingsClient.checkLocationSettings(builder.build())
                 .addOnSuccessListener((locationSettingsResponse) -> requestLocationUpdates(mLocationRequest))
                 .addOnFailureListener(e -> {

@@ -52,3 +52,32 @@
 -keep class com.huawei.hianalytics.**{*;}
 -keep class com.huawei.updatesdk.**{*;}
 -keep class com.huawei.hms.**{*;}
+-keepattributes SourceFileLineNumberTable,
+-keep class com.hianalytics.android.**{*;}
+
+-keep class com.huawei.hms.ads.** {*; }
+-keep interface com.huawei.hms.ads.** {*; }
+
+
+-keep class com.huawei.hms.analytics.HiAnalyticsTools{
+ public static void enableLog();
+ public static void enableLog(int);
+}
+-keep class com.huawei.hms.feature.** {public *;}
+-keep public class com.huawei.hms.common.** {public *;}
+-keep class com.huawei.hms.analytics.internal.filter.EventFilter{
+ public void logFilteredEvent(java.lang.String android.os.Bundle);,
+ public java.lang.String getUserProfile(java.lang.String);
+}
+-keep public class com.huawei.hms.dtm.EventFilter {
+ public <fields>;
+ public <methods>;
+}
+
+
+
+
+
+
+
+

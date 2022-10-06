@@ -1,2 +1,10 @@
 include ':app'
 rootProject.name = "HMSCourseDemoA"
+
+dependencyResolutionManagement {
+    repositories {
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+    }
+}

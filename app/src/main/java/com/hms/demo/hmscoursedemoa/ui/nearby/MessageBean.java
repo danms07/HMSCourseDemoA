@@ -23,7 +23,7 @@ package com.hms.demo.hmscoursedemoa.ui.nearby;
  */
 public class MessageBean {
     private String msg;
-    private boolean isSend;
+    private boolean isSend=false;
     private String myName;
     private String friendName;
 

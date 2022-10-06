@@ -103,7 +103,7 @@ public class MapViewModel extends ViewModel
             SearchService service=navigator.loadSearchService();
             if(service!=null){
                 DetailSearchRequest request=new DetailSearchRequest();
-                request.siteId=pointOfInterest.placeId;
+                request.setSiteId(pointOfInterest.placeId);
                 service.detailSearch(request, this);
             }
         }
@@ -112,8 +112,8 @@ public class MapViewModel extends ViewModel
     @Override
     public void onSearchResult(DetailSearchResponse detailSearchResponse) {
         if(detailSearchResponse!=null){
-            if(detailSearchResponse.site!=null&&navigator!=null){
-                navigator.displaySiteDialog(detailSearchResponse.site);
+            if(detailSearchResponse.getSite()!=null&&navigator!=null){
+                navigator.displaySiteDialog(detailSearchResponse.getSite());
             }
         }
     }
@@ -122,7 +122,7 @@ public class MapViewModel extends ViewModel
     public void onSearchError(SearchStatus searchStatus) {
         Log.e(
                 "MapViewModel",
-                "Error : " + searchStatus.errorCode + " " + searchStatus.errorMessage
+                "Error : " + searchStatus.getErrorCode() + " " + searchStatus.getErrorMessage()
         );
     }
 

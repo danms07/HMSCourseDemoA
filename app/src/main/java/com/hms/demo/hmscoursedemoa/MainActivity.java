@@ -18,6 +18,7 @@ import com.huawei.hms.kit.awareness.barrier.BarrierUpdateRequest;
 import com.huawei.hms.kit.awareness.barrier.HeadsetBarrier;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -118,5 +119,10 @@ public class MainActivity extends AppCompatActivity implements HeadsetBarrierRec
             unregisterReceiver(barrierReceiver);
         }
         super.onDestroy();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

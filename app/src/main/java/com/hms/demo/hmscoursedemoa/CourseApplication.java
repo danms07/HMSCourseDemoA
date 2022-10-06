@@ -19,10 +19,13 @@ import java.util.Map;
 import java.util.Set;
 
 public class CourseApplication extends Application {
+
+
     @Override
     public void onCreate() {
         super.onCreate();
         HiAnalyticsInstance instance = HiAnalytics.getInstance(this);
+        instance.setAnalyticsEnabled(true);
 
         // Report an event upon app switching to the background.
         ReportPolicy moveBackgroundPolicy = ReportPolicy.ON_MOVE_BACKGROUND_POLICY;
@@ -74,4 +77,6 @@ public class CourseApplication extends Application {
             notificationManager.createNotificationChannel(channel);
 
     }
+
+
 }

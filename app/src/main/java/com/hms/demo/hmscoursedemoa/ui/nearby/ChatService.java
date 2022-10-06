@@ -158,6 +158,7 @@ public class ChatService extends ConnectCallback {
 
     @Override
     public void onEstablish(String endpointId, ConnectInfo connectionInfo) {
+
         mTransferEngine = Nearby.getTransferEngine(context);
         this.endpointId = endpointId;
         mDiscoveryEngine.acceptConnect(endpointId, dataCallback);

@@ -55,7 +55,7 @@
                     android:id="@+id/et_friend_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="15"/>
+                    android:maxLength="15" />
             </LinearLayout>
 
             <Button
@@ -85,9 +85,9 @@
                 android:id="@+id/et_msg"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/input_message_here"
                 android:layout_weight="1"
-                android:maxLength="600"/>
+                android:hint="@string/input_message_here"
+                android:maxLength="600" />
 
             <Button
                 android:id="@+id/btn_send"

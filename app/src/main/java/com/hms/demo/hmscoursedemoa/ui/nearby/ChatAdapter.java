@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatVH> {
 
-    private ArrayList<MessageBean> items= new ArrayList();
+    private ArrayList<MessageBean> items;
 
     public void setItems(ArrayList<MessageBean> items) {
         this.items = items;
@@ -53,8 +53,6 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatVH> {
         public void bind(MessageBean item){
             binding.setItem(item);
             if (item.isSend()) {
-
-
                 FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
                         FrameLayout.LayoutParams.WRAP_CONTENT,
                         FrameLayout.LayoutParams.WRAP_CONTENT

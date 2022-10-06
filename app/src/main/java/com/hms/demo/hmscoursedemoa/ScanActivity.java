@@ -71,7 +71,12 @@ public class ScanActivity extends AppCompatActivity {
             Object obj = data.getParcelableExtra(ScanUtil.RESULT);
             if (obj instanceof HmsScan) {
                 HmsScan result=(HmsScan) obj;
-                if (!TextUtils.isEmpty(((HmsScan) obj).getOriginalValue())) {
+                if (!TextUtils.isEmpty(result.getOriginalValue())) {
+
+                    /*if(result.scanTypeForm==HmsScan.CONTACT_DETAIL_FORM){
+                        String number=result.telPhoneNumber.telPhoneNumber;
+                    }*/
+
                     tv.setText(result.getOriginalValue());
                     Toast.makeText(this, result.getOriginalValue(), Toast.LENGTH_SHORT).show();
                 }

@@ -5,7 +5,6 @@ plugins {
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "30.0.0"
 
     defaultConfig {
         applicationId "com.hms.demo.hmscoursedemoa"
@@ -25,6 +24,15 @@ android {
             storePassword 'demo123'
             v1SigningEnabled true
             v2SigningEnabled true
+            storeFile file('D:/AndroidStudioProjects/HMSCourseDemoA/app/demoa.jks')
+            storePassword 'demo123'
+            keyPassword 'demo123'
+        }
+        config {
+            storeFile file('D:/AndroidStudioProjects/HMSCourseDemoA/app/demoa.jks')
+            storePassword 'demo123'
+            keyPassword 'demo123'
+            keyAlias 'demo'
         }
     }
 
@@ -68,54 +76,54 @@ dependencies {
     implementation 'com.huawei.agconnect:agconnect-core:1.5.1.300'
 
     //Account kit
-    implementation 'com.huawei.hms:hwid:5.2.0.300'
+    implementation 'com.huawei.hms:hwid:6.4.0.300'
 
     //Push Kit
-    implementation 'com.huawei.hms:push:5.1.1.301'
+    implementation 'com.huawei.hms:push:6.3.0.302'
 
     //Analytics
-    implementation 'com.huawei.hms:hianalytics:5.1.0.300'
+    implementation 'com.huawei.hms:hianalytics:6.4.1.300'
 
     //Ads
-    implementation 'com.huawei.hms:ads-lite:13.4.37.300'
+    implementation 'com.huawei.hms:ads-lite:13.4.52.302'
 
     //DTM
-    implementation 'com.huawei.hms:dtm-api:5.1.0.300'
+    implementation 'com.huawei.hms:dtm-api:6.2.0.305'
 
     //MAPs
-    implementation 'com.huawei.hms:maps:5.2.0.301'
+    implementation 'com.huawei.hms:maps:6.3.1.300'
 
     //MAPs Fallback dependencies
-    implementation 'com.huawei.hms:maproute-fallback:5.1.0.300'
-    implementation 'com.huawei.hms:hwmaps-fallback:5.1.0.300'
+    //implementation 'com.huawei.hms:maproute-fallback:5.1.0.300'
+    //implementation 'com.huawei.hms:hwmaps-fallback:5.1.0.300'
 
     //Location Kit
-    implementation 'com.huawei.hms:location:5.1.0.300'
+    implementation 'com.huawei.hms:location:6.3.0.300'
 
     //Site Kit
-    implementation 'com.huawei.hms:site:5.1.0.300'
+    implementation 'com.huawei.hms:site:6.2.0.302'
 
     //RemoteConfig
     implementation 'com.huawei.agconnect:agconnect-remoteconfig:1.4.2.301'
 
     //Nearby Service
-    implementation 'com.huawei.hms:nearby:5.1.0.300'
+    implementation 'com.huawei.hms:nearby:6.2.0.300'
 
     //Safety Detect
-    implementation 'com.huawei.hms:safetydetect:5.0.5.302'
+    implementation 'com.huawei.hms:safetydetect:6.3.0.301'
 
     //IAP
-    implementation 'com.huawei.hms:iap:5.1.0.300'
+    implementation 'com.huawei.hms:iap:6.3.0.300'
 
     //Scan kit
-    implementation 'com.huawei.hms:scanplus:1.3.0.300'
+    implementation 'com.huawei.hms:scanplus:2.4.0.302'
 
     //Panorama Kit
-    implementation 'com.huawei.hms:panorama:5.0.2.304'
-    implementation 'com.huawei.hms:panorama-local:5.0.2.304'
+    implementation 'com.huawei.hms:panorama:5.0.2.306'
+    implementation 'com.huawei.hms:panorama-local:5.0.2.306'
 
     //Awareness kit
-    implementation 'com.huawei.hms:awareness:1.0.8.301'
+    implementation 'com.huawei.hms:awareness:3.1.0.300'
 
     //Work Manager
     //implementation "androidx.work:work-runtime:2.4.0"
@@ -129,4 +137,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.huawei.hms:ads-identifier:3.4.34.301'
+    implementation 'com.huawei.hms:hianalytics:5.0.5.300'
+    implementation 'com.huawei.hms:panorama-local:5.0.2.302'
 }

@@ -88,10 +88,7 @@ public class NearbyFragment extends Fragment implements ChatService.ChatServiceL
     }
 
     public String[] getPermissions() {
-        return new String[]{Manifest.permission.BLUETOOTH,
-                Manifest.permission.BLUETOOTH_ADMIN,
-                Manifest.permission.ACCESS_WIFI_STATE,
-                Manifest.permission.CHANGE_WIFI_STATE,
+        return new String[]{
                 Manifest.permission.ACCESS_COARSE_LOCATION,
                 Manifest.permission.ACCESS_FINE_LOCATION};
     }

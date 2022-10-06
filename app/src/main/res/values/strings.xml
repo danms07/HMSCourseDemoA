@@ -29,4 +29,9 @@
     <string name="menu_panorama">Panorama</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="consumable">Consumable</string>
+    <string name="nonConsumable">Non-consumable</string>
+    <string name="invalidIAPCountry">IAP is not supported in your country/region</string>
+    <string name="unknownError">An error occurred</string>
 </resources>
